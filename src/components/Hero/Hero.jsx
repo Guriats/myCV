@@ -1,13 +1,12 @@
-import React from "react";
 import "./Hero.css";
 
 const Hero = ({ hero }) => {
   return (
     <div className="hero">
-      <img src={hero.image} alt="" />
+      <img src={hero.image} alt={hero.name} />
       <div className="card">
         <h2>
-          {hero.name} {hero.adress}
+          {hero.name} {hero.surname}
         </h2>
         <p>🗺{hero.city} </p>
         <p>🗓{hero.birthDate}</p>
@@ -15,7 +14,7 @@ const Hero = ({ hero }) => {
           📧
           <a href={"mailto:" + hero.email}>tony@starkindustries.com</a>
         </p>
-        <p>📱 {hero.phone}</p>
+       
         <p>
           💾<a href={hero.gitHub}>GitHub</a>
         </p>
@@ -23,4 +22,5 @@ const Hero = ({ hero }) => {
     </div>
   );
 };
+
 export default Hero;
